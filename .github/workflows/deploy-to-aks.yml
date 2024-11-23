@@ -28,7 +28,7 @@ jobs:
     # Step 4: Authenticate with AKS and configure kubectl context
     - name: Configure kubectl
       run: |
-        az aks get-credentials --resource-group <RESOURCE_GROUP_NAME> --name <CLUSTER_NAME> --overwrite-existing
+        az aks get-credentials --resource-group eycluster_group --name eycluster --overwrite-existing
       env:
         AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
